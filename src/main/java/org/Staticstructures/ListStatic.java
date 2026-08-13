@@ -19,6 +19,12 @@ public class ListStatic {
         }
     }
 
+    public static void printVectorForEach(int[] intVector){
+        for (int nums : intVector) {
+            System.out.println("Vector:" + nums);
+        }
+    }
+
     public static void printVector(int[] intVector){
         System.out.println("Vector: " + Arrays.toString(intVector));
     }
