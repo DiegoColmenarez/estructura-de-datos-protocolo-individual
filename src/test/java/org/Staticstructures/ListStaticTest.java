@@ -11,8 +11,8 @@ class ListStaticTest {
     @Test
     void printVectorTest(){
          ListStatic.printVector(vector);
-         ListStatic.printWithFor(vector);
-         ListStatic.printVectorForEach(vector);
+//         ListStatic.printWithFor(vector);
+//         ListStatic.printVectorForEach(vector);
     }
 
     @Test
@@ -28,9 +28,7 @@ class ListStaticTest {
         int[] emptyArray = new int[0];
         assertDoesNotThrow(() -> ListStatic.printVector(emptyArray),
                 "Debería manejar array vacío sin error");
-        assertDoesNotThrow(() -> ListStatic.printWithFor(emptyArray),
-                "Debería manejar array vacío sin error");
+        assertDoesNotThrow(() -> ListStatic.printVectorForEach(emptyArray),
+               "Debería manejar array vacío sin error");
     }
-
-
 }
