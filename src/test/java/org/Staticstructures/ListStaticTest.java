@@ -6,11 +6,11 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class ListStaticTest {
-    int[] vector = new int[]{1,2,3,4,5,6,7,8,9,0};
+    int[] vector = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 0};
 
     @Test
-    void printVectorTest(){
-         ListStatic.printVector(vector);
+    void printVectorTest() {
+        ListStatic.printVector(vector);
 //         ListStatic.printWithFor(vector);
 //         ListStatic.printVectorForEach(vector);
     }
@@ -29,6 +29,24 @@ class ListStaticTest {
         assertDoesNotThrow(() -> ListStatic.printVector(emptyArray),
                 "Debería manejar array vacío sin error");
         assertDoesNotThrow(() -> ListStatic.printVectorForEach(emptyArray),
-               "Debería manejar array vacío sin error");
+                "Debería manejar array vacío sin error");
+        assertDoesNotThrow(() -> ListStatic.changeOddNums(emptyArray),
+                "Deberia manejar array vacio sin error");
+        assertDoesNotThrow(() -> ListStatic.changeOddNums(emptyArray),
+                "Deberia manejar array vacio sin error");
+    }
+
+    @Test
+    void changeOddNumsTest() {
+        var vectorChange = ListStatic.changeOddNums(vector);
+        assertNotEquals(vector, vectorChange); //siempre y cuando no este vacio el  vector
+        ListStatic.printVector(vectorChange);
+    }
+
+    @Test
+    void multiplyByIndexTest(){
+        var vectorIndex = ListStatic.multiplyByIndex(vector);
+        assertNotEquals(vector, vectorIndex); //siempre y cuando no este vacio el  vector
+        ListStatic.printVector(vectorIndex);
     }
 }
