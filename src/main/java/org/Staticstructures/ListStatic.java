@@ -1,6 +1,7 @@
 package org.Staticstructures;
 
 import java.util.Arrays;
+import java.util.function.IntBinaryOperator;
 
 public class ListStatic {
     private int[] listNums;
@@ -29,24 +30,18 @@ public class ListStatic {
         System.out.println("Vector: " + Arrays.toString(intVector));
     }
 
-    public static int[] changeOddNums(int[] intVector){
-        var evenVector = new int[intVector.length];
-        var index = 0;
-        for (int nums : intVector) {
-            if (nums % 2 == 0) {
-                evenVector[index] = nums;
-            }
-            index++;
+    private static int[] transformArray(int[] array, IntBinaryOperator operation) {
+        int[] result = new int[array.length];
+        for (int i = 0; i < array.length; i++) {
+            result[i] = operation.applyAsInt(array[i], i);
         }
-        return evenVector;
+        return result;
+    }
+    public static int[] changeOddNums(int[] intVector){
+        return transformArray(intVector, (num, index) -> num % 2 == 0 ? num : 0);
     }
 
     public static int[] multiplyByIndex(int[] intVector){
-        var indexVector = new int[intVector.length];
-        for (int i = 0; i < intVector.length; i++) {
-            int num = intVector[i] * i;
-            indexVector[i] = num;
-        }
-        return indexVector;
+      return transformArray(intVector, (num, index) -> num * index);
     }
 }
