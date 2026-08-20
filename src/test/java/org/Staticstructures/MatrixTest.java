@@ -13,6 +13,8 @@ class MatrixTest {
                 {7, 8, 9}
         };
         //Matrix.printMatrix(matrix);
+        Matrix.printByColumn(matrix);
+        System.out.println("-------------------------");
     }
     @Test
     void flipVerticalMatrixTest() {
