@@ -7,8 +7,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ListStaticTest {
     int[] vector = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 0};
-
-    int[][] matriz = new int[3][3];
     @Test
     void printVectorTest() {
         ListStatic.printVector(vector);
