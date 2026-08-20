@@ -1,7 +1,5 @@
 package org.Staticstructures;
 
-import java.util.Arrays;
-
 public class Matrix {
     private int[][] matrix;
 
@@ -13,6 +11,15 @@ public class Matrix {
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
                 System.out.print(matrix[i][j] + "\t");
+            }
+            System.out.println();
+        }
+    }
+    public static void printByColumn(int[][] matrix){
+        for (int j = 0; j < matrix[0].length; j++) {
+            System.out.print("Columna " + j + ": ");
+            for (int i = 0; i < matrix.length; i++) {
+                System.out.print(matrix[i][j] + " ");
             }
             System.out.println();
         }
