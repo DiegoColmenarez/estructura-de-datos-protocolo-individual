@@ -4,5 +4,5 @@ import java.util.List;
 
 public interface GetTotalUseCase{
 
-    long getTotal(List<SalesLine> salesLineList);
+    long calculateTotalSales(List<SalesLine> salesLineList);
 }

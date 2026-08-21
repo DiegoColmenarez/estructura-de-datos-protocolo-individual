@@ -9,7 +9,7 @@ public class Reports {
         this.getTotalUseCase = getTotalUseCase;
     }
 
-    public long calulateTotalSales(List<SalesLine> salesLineList){
-        return getTotalUseCase.getTotal(salesLineList);
+    public long getTotal(List<SalesLine> salesLineList){
+        return getTotalUseCase.calculateTotalSales(salesLineList);
     }
 }

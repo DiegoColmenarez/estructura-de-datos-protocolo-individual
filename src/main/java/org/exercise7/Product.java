@@ -47,7 +47,6 @@ public class Product {
 
        // System.out.println(salesProduct1.getLineTotal());
 
-        System.out.println(SalesLine.getTotal(salesLineList));
 
     }
 }
