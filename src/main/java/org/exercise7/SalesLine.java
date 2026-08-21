@@ -20,13 +20,13 @@ public class SalesLine {
         return salesNum;
     }
 
-    public double getLineTotal(){
-       return (double) (product.getPrice() * salesNum)/100;
+    public long getLineTotal(){
+       return (product.getPrice() * salesNum)/100;
     }
 
     public static double getTotal(List<SalesLine> salesLineList){
         double total = 0;
-        for (SalesLine salesLine: salesLineList) {
+        for (SalesLine salesLine : salesLineList){
             total += salesLine.getLineTotal();
         }
         return total;
