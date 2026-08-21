@@ -1,6 +1,7 @@
 package org.exercise7;
 
-import java.math.BigDecimal;
+
+import java.util.List;
 
 public class SalesLine {
     private final Product product;
@@ -19,9 +20,15 @@ public class SalesLine {
         return salesNum;
     }
 
-    public BigDecimal getLineTotal(){
-        BigDecimal productPrice = new BigDecimal(String.valueOf(product.getPrice()));
-        BigDecimal salesNum = new BigDecimal(getSalesNum());
-        return productPrice.multiply(salesNum);
+    public double getLineTotal(){
+       return (double) (product.getPrice() * salesNum)/100;
+    }
+
+    public static double getTotal(List<SalesLine> salesLineList){
+        double total = 0;
+        for (SalesLine salesLine: salesLineList) {
+            total += salesLine.getLineTotal();
+        }
+        return total;
     }
 }
