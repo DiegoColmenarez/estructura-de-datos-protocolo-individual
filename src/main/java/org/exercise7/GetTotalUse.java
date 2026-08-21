@@ -2,6 +2,6 @@ package org.exercise7;
 
 import java.util.List;
 
-public interface GetTotalUse {
+public interface GetTotalUseCase {
     long getTotal(List<SalesLine> salesLineList);
 }
