@@ -22,8 +22,6 @@ public class Product {
         productList.add(new Product("A002", "Teclado Mecanico", 23.6F));
         productList.add(new Product("A003", "Funda de Laptop", 12.3F));
         productList.add(new Product("A004", "Mouse inalambrico", 15.7F));
-
-
     }
 
     public String getName() {
