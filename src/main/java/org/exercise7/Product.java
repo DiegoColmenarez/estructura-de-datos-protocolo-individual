@@ -1,8 +1,5 @@
 package org.exercise7;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Product {
    private final String name;
    private final String id;

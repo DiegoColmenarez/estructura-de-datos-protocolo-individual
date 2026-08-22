@@ -1,12 +1,13 @@
 package org.exercise7;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
     static void main() {
         Calculator calculator = new Calculator();
-        Reports reports = new Reports(calculator);
+        Reports reports = new Reports(calculator, calculator);
 
         List<Product> productList = new ArrayList<>();
 
@@ -21,7 +22,7 @@ public class Main {
         List<SalesLine> salesLineList = new ArrayList<>();
         SalesLine salesProduct1 = new SalesLine(product1, 5);
         SalesLine salesProduct2 = new SalesLine(product2, 8);
-        SalesLine salesProduct3 = new SalesLine(product3, 1);
+        SalesLine salesProduct3 = new SalesLine(product3, 8);
         salesLineList.add(salesProduct1);
         salesLineList.add(salesProduct2);
         salesLineList.add(salesProduct3);
