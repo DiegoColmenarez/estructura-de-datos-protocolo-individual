@@ -18,6 +18,6 @@ public class SalesLine {
     }
 
     public long getLineTotal(){
-       return (product.getPrice() * salesNum)/100;
+       return (product.getPrice() * salesNum);
     }
 }

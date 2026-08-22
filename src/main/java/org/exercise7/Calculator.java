@@ -2,7 +2,7 @@ package org.exercise7;
 
 import java.util.List;
 
-public class Calculator implements GetTotalUseCase{
+public class Calculator implements GetTotalUseCase, GetBestSellingUseCase{
 
     @Override
     public long calculateTotalSales(List<SalesLine> salesLineList) {
@@ -11,5 +11,10 @@ public class Calculator implements GetTotalUseCase{
             total += salesLine.getLineTotal();
         }
         return total;
+    }
+
+    @Override
+    public Product getBestSelling(List<SalesLine> salesLineList) {
+        return null;
     }
 }
