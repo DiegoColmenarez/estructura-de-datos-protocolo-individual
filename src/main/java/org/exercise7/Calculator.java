@@ -14,7 +14,7 @@ public class Calculator implements GetTotalUseCase, GetBestSellingUseCase{
     }
 
     @Override
-    public Product getBestSelling(List<SalesLine> salesLineList) {
-        return null;
+    public String getBestSelling(List<SalesLine> salesLineList) {
+      return null;
     }
 }
