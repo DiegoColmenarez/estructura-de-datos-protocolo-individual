@@ -12,7 +12,7 @@ public class DinamicList {
     }
 
     private static List<Integer> transformList(List<Integer> integerList, BiFunction<Integer, Integer, Integer> operation){
-        List<Integer> result = new ArrayList<>();
+        List<Integer> result = new ArrayList<>(integerList.size());
         for (int i = 0; i < integerList.size(); i++) {
             result.add(operation.apply(integerList.get(i), i ));
         }
