@@ -1,5 +1,7 @@
 package org.dynamicStructures;
 
+import org.exercise7.Product;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.BiFunction;
@@ -33,8 +35,8 @@ public class DinamicList {
 
     public static void printList(List<Integer> integerList){
         System.out.println("Elementos del arreglo: ");
-        for (Integer integer : integerList){
-            System.out.print(integer);
+        for (int i = 0; i < integerList.size(); i++) {
+            System.out.println("[Indice: " + i + " Valor: " + integerList.get(i) + "]");
         }
     }
 }
