@@ -30,4 +30,11 @@ public class DinamicList {
     public List<Integer> getIntegerList() {
         return integerList;
     }
+
+    public static void printList(List<Integer> integerList){
+        System.out.println("Elementos del arreglo: ");
+        for (Integer integer : integerList){
+            System.out.print(integer);
+        }
+    }
 }
