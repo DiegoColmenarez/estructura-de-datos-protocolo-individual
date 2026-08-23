@@ -2,8 +2,6 @@ package org.dynamicStructures;
 
 import org.junit.jupiter.api.Test;
 
-
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -34,6 +32,16 @@ class DinamicListTest {
         assertNotEquals(lista, listChange, "Las listas deberían ser diferentes si no está vacía");
         assertEquals(expected, listChange, "Los números impares deberían ser 0");
         DinamicList.printList(listChange);
+        System.out.println();
+    }
+
+    @Test
+    void multiplyByIndexListTest() {
+        List<Integer> listIndex = DinamicList.multiplyByIndexList(lista);
+        List<Integer> expected = Arrays.asList(0, 2, 6, 12, 20, 30, 42, 56, 72, 0);
+        assertNotEquals(lista, listIndex, "Las listas deberían ser diferentes si no está vacía");
+        assertEquals(expected, listIndex, "Los números deben estar multiplicados por su índice");
+        DinamicList.printList(listIndex);
         System.out.println();
     }
 }
