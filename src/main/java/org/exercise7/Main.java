@@ -26,8 +26,14 @@ public class Main {
         salesLineList.add(salesProduct2);
         salesLineList.add(salesProduct3);
 
-        System.out.println(salesProduct1.getLineTotal());
-        System.out.println(calculator.calculateTotalSales(salesLineList));
+        System.out.println("Monto total para el producto 1: " + salesProduct1.getLineTotal());
+        System.out.println("Monto total general: " + calculator.calculateTotalSales(salesLineList));
+
+        List<Product> BestSellers = calculator.getBestSelling(salesLineList);
+        System.out.println("Productos Más vendidos: ");
+        for (Product product : BestSellers){
+            System.out.println(product.getName());
+        }
 
     }
 }
