@@ -22,4 +22,8 @@ public class DinamicList {
     public static List<Integer> changeOddNumsList(List<Integer> integerList){
         return transformList(integerList, (num, index) -> num % 2 == 0 ? num : 0);
     }
+
+    public static List<Integer>  multiplyByIndexList(List<Integer> integerList){
+        return transformList(integerList, (num, index) -> num * index);
+    }
 }
