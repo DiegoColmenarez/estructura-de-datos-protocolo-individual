@@ -16,4 +16,12 @@ class DinamicListTest {
         assertDoesNotThrow(() -> DinamicList.printList(lista),
                 "Debería imprimir la lista sin lanzar excepciones");
     }
+
+    @Test
+    void constructorTest(){
+        DinamicList dinamicList = new DinamicList(lista);
+        assertNotNull(dinamicList, "El objeto no debería ser null");
+        assertEquals(lista, dinamicList.getIntegerList(),
+                "La lista interna debería ser igual a la original");
+    }
 }
