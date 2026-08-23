@@ -3,6 +3,7 @@ package org.dynamicStructures;
 import org.junit.jupiter.api.Test;
 
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -23,5 +24,16 @@ class DinamicListTest {
         assertNotNull(dinamicList, "El objeto no debería ser null");
         assertEquals(lista, dinamicList.getIntegerList(),
                 "La lista interna debería ser igual a la original");
+    }
+
+    @Test
+    void changeOddNumsListTest() {
+        List<Integer> listChange = DinamicList.changeOddNumsList(lista);
+        List<Integer> expected = Arrays.asList(0, 2, 0, 4, 0, 6, 0, 8, 0, 0);
+
+        assertNotEquals(lista, listChange, "Las listas deberían ser diferentes si no está vacía");
+        assertEquals(expected, listChange, "Los números impares deberían ser 0");
+        DinamicList.printList(listChange);
+        System.out.println();
     }
 }
