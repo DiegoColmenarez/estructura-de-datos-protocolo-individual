@@ -11,11 +11,15 @@ public class DinamicList {
         this.integerList = integerList;
     }
 
-    private List<Integer> transformList(List<Integer> integerList, BiFunction<Integer, Integer, Integer> operation){
+    private static List<Integer> transformList(List<Integer> integerList, BiFunction<Integer, Integer, Integer> operation){
         List<Integer> result = new ArrayList<>();
         for (int i = 0; i < integerList.size(); i++) {
             result.add(operation.apply(integerList.get(i), i ));
         }
         return result;
+    }
+
+    public static List<Integer> changeOddNumsList(List<Integer> integerList){
+        return transformList(integerList, (num, index) -> num % 2 == 0 ? num : 0);
     }
 }
