@@ -25,7 +25,7 @@ public class Calculator implements GetTotalUseCase, GetBestSellingUseCase{
                 bestSellersList.clear();
                 bestSellersList.add(salesLine.getProduct());
             } else if (currentSales == amount) {
-                    bestSellersList.add(salesLine.getProduct());
+                bestSellersList.add(salesLine.getProduct());
             }
         }
         return bestSellersList;

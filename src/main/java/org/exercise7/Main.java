@@ -5,9 +5,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
-    static void main() {
+    static void main(){
         Calculator calculator = new Calculator();
-        Reports reports = new Reports(calculator, calculator);
 
         List<Product> productList = new ArrayList<>();
 
@@ -28,7 +27,7 @@ public class Main {
         salesLineList.add(salesProduct3);
 
         System.out.println(salesProduct1.getLineTotal());
-        System.out.println(reports.getTotal(salesLineList));
+        System.out.println(calculator.calculateTotalSales(salesLineList));
 
     }
 }
