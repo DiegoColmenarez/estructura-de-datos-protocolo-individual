@@ -26,4 +26,8 @@ public class DinamicList {
     public static List<Integer>  multiplyByIndexList(List<Integer> integerList){
         return transformList(integerList, (num, index) -> num * index);
     }
+
+    public List<Integer> getIntegerList() {
+        return integerList;
+    }
 }
